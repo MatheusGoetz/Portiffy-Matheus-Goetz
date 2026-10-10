@@ -1,13 +1,13 @@
-import{ Component } from '@angular/core';
+
+import { Component } from '@angular/core';
+
 import { Navbar } from './shared/components/navbar/navbar';
+import { Hero } from './features/home/components/hero/hero';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar],
+  imports: [Navbar, Hero],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
-export class App {
-  readonly name = 'Matheus Goetz';
-  readonly role = 'Software Developer';
-}
+export class App {}
