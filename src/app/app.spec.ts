@@ -28,6 +28,19 @@ describe('App', () => {
     );
   });
 
+
+it('should render the four skill categories', () => {
+  const fixture = TestBed.createComponent(App);
+
+  fixture.detectChanges();
+
+  const element = fixture.nativeElement as HTMLElement;
+  const cards = element.querySelectorAll('.skill-card');
+
+  expect(cards.length).toBe(4);
+});
+
+
   it('should link to the GitHub profile', () => {
     const fixture = TestBed.createComponent(App);
 
