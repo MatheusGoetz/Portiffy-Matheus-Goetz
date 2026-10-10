@@ -1,0 +1,72 @@
+
+<section
+  class="skills-section"
+  id="skills"
+  aria-labelledby="skills-heading"
+>
+  <div class="skills-container">
+
+    <header class="section-header">
+      <div class="section-intro">
+        <span class="section-label">
+          <span class="section-line"></span>
+          01 / TECH STACK
+        </span>
+
+        <h2 id="skills-heading">
+          Tecnologias &
+          <span>Competências.</span>
+        </h2>
+      </div>
+
+      <p class="section-description">
+        Tecnologias e ferramentas que utilizo e estudo
+        para desenvolver aplicações modernas, integrando
+        frontend, backend e infraestrutura.
+      </p>
+    </header>
+
+    <div class="skills-grid">
+      @for (category of categories; track category.id) {
+        <article class="skill-card">
+
+          <div class="card-top">
+            <span class="card-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+            <span class="card-number">
+              {{ category.number }}
+            </span>
+          </div>
+
+          <h3>{{ category.title }}</h3>
+
+          <p class="card-description">
+            {{ category.description }}
+          </p>
+
+          <ul class="technology-list">
+            @for (
+              technology of category.technologies;
+              track technology
+            ) {
+              <li class="technology-tag">
+                {{ technology }}
+              </li>
+            }
+          </ul>
+
+        </article>
+      }
+    </div>
+
+    <div class="skills-footer">
+      <span class="status-dot"></span>
+      <span>Aprendizado e evolução contínua</span>
+    </div>
+
+  </div>
+</section>
